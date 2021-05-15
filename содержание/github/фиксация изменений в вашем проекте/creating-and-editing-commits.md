@@ -3,7 +3,7 @@ title: Creating and editing commits
 intro: ''
 mapTopic: true
 redirect_from:
-  - /articles/creating-and-editing-commits
+  - / статьи / создание-и-редактирование-коммитовОтменить изменения
 versions:
   free-pro-team: '*'
   enterprise-server: '*'
