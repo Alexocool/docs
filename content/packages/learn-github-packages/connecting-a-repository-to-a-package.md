@@ -6,24 +6,25 @@ redirect_from:
   - /packages/managing-container-images-with-github-container-registry/connecting-a-repository-to-a-container-image
   - /packages/guides/connecting-a-repository-to-a-container-image
 versions:
-  free-pro-team: '*'
+  fpt: '*'
+shortTitle: Connect a repository
 ---
 
 By connecting a repository to a package, the package landing page will show information and links from the repository, such as the README.
 
-### Connecting a repository to a user-owned package on {% data variables.product.prodname_dotcom %}
+## Connecting a repository to a user-owned package on {% data variables.product.prodname_dotcom %}
 
 {% data reusables.package_registry.package-settings-from-user-level %}
 
 {% data reusables.package_registry.repository_connection_steps %}
 
-### Connecting a repository to an organization-owned package on {% data variables.product.prodname_dotcom %}
+## Connecting a repository to an organization-owned package on {% data variables.product.prodname_dotcom %}
 
 {% data reusables.package_registry.package-settings-from-org-level %}
 
 {% data reusables.package_registry.repository_connection_steps %}
 
-### Connecting a repository to a container image using the command line
+## Connecting a repository to a container image using the command line
 
 1. In your Dockerfile, add this line, replacing `OWNER` and `REPO` with your details:
 
@@ -59,14 +60,14 @@ By connecting a repository to a package, the package landing page will show info
   $ docker tag 38f737a91f39 ghcr.io/monalisa/hello_docker:latest
   ```
 
-5. If you haven't already, authenticate to the {% data variables.product.prodname_capitalized_container_registry %}. For more information, see "[Authenticating to the {% data variables.product.prodname_capitalized_container_registry %}](/packages/managing-container-images-with-github-container-registry/pushing-and-pulling-docker-images#authenticating-to-the-container-registry)."
+5. If you haven't already, authenticate to the {% data variables.product.prodname_container_registry %}. For more information, see "[Authenticating to the {% data variables.product.prodname_container_registry %}](/packages/managing-container-images-with-github-container-registry/pushing-and-pulling-docker-images#authenticating-to-the-container-registry)."
     {% raw %}
     ```shell
     $ echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
     > Login Succeeded
     ```
     {% endraw %}
-6. Push your container image to the {% data variables.product.prodname_capitalized_container_registry %}.
+6. Push your container image to the {% data variables.product.prodname_container_registry %}.
   ```shell
   $ docker push ghcr.io/OWNER/IMAGE-NAME:TAG
   ```
